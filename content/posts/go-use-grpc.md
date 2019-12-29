@@ -4,7 +4,7 @@ date: 2019-12-13T00:00:00+08:00
 draft: false
 description: "Golang 使用 GRPC 和 GRPC proto 使用"
 show_in_homepage: true
-show_description: false
+show_description: true
 license: ''
 
 tags: ["Golang", "GRPC"]

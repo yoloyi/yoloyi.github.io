@@ -4,7 +4,7 @@ date: 2019-12-17T00:00:00+08:00
 draft: false
 description: "什么是软件工程，软件工程的意义、目标是什么？"
 show_in_homepage: true
-show_description: false
+show_description: true
 license: ''
 
 tags: ["软件工程"]

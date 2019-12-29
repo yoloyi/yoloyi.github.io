@@ -4,7 +4,7 @@ date: 2019-12-13T00:00:00+08:00
 draft: false
 description: ""
 show_in_homepage: true
-show_description: false
+show_description: true
 license: ''
 
 tags: ["ElasticSearch"]

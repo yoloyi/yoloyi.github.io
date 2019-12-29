@@ -4,7 +4,7 @@ date: 2019-12-17T00:00:00+08:00
 draft: false
 description: "在同一台计算机上安装多个Go版本可能很有用，以确保软件包的测试可以通过多个Go版本。一旦安装了一个Go版本，就可以如下安装另一个版本"
 show_in_homepage: true
-show_description: false
+show_description: true
 license: ''
 
 tags: ["Golang"]
