@@ -20,7 +20,9 @@ jobs:
           extended: true
 
       - name: Build Hugo
-        run:  HUGO_ENV=production hugo --gc --minify
+        run: |
+          HUGO_ENV=production hugo --gc --minify
+          cp ./CNAME ./public/CNAME
 
       - name: Deploy Hugo to gh-pages
         uses: peaceiris/actions-gh-pages@v2.5.0

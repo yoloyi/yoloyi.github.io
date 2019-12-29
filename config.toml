@@ -80,7 +80,7 @@ staticDir = ["static", "../assets/others"]               # static directories
   linkToMarkdown = true                                  # whether to show link to Raw Markdown content of the post
 
                                                       #### site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  google_verification = ""
+  google_verification = "googleee59c661cafb0f1e.html"
   bing_verification = ""
   yandex_verification = ""
   pinterest_verification = ""
