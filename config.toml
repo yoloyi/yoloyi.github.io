@@ -19,7 +19,7 @@ pygmentsCodefences = true
 pygmentsUseClasses = true
 pygmentsCodefencesGuessSyntax = true
 
-staticDir = ["static", "public"]               # static directories
+staticDir = ["static", "data"]               # static directories
 
 [author]                                              #### Author Info
   name = "余农场主"
