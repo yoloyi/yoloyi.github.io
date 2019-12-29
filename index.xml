@@ -1,68 +1,76 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>余农场主 on 余农场主</title><link>//blog.yoloyi.com/</link><description>Recent content in 余农场主 on 余农场主</description><generator>Hugo -- gohugo.io</generator><language>zh</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Aug 2019 11:04:49 +0800</lastBuildDate><atom:link href="//blog.yoloyi.com/" rel="self" type="application/rss+xml"/><item><title>Posts</title><link>//blog.yoloyi.com/posts/</link><pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>//blog.yoloyi.com/posts/</guid><description/></item><item><title>关于 LoveIt</title><link>//blog.yoloyi.com/about/</link><pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>//blog.yoloyi.com/about/</guid><description>
-&lt;p&gt;&lt;a href=&#34;https://github.com/dillonzq/LoveIt&#34;&gt;LoveIt :(far fa-heart):&lt;/a&gt; 是一个由 &lt;a href=&#34;https://dillonzq.com&#34;&gt;Dillon&lt;/a&gt; 开发的&lt;strong&gt;简洁&lt;/strong&gt;、&lt;strong&gt;优雅&lt;/strong&gt;且&lt;strong&gt;高效&lt;/strong&gt;的 &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; 博客主题。&lt;/p&gt;
-&lt;p&gt;它的原型基于 &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34;&gt;LeaveIt 主题&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/liuzc/LeaveIt/&#34;&gt;KeepIt 主题&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//blog.yoloyi.com/images/Apple-Devices-Preview.png&#34; alt=&#34;Hugo 主题 LoveIt&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
-&lt;h4 id=&#34;性能和-seo&#34;&gt;性能和 SEO&lt;/h4&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>余农场主 on 余农场主</title><link>//blog.yoloyi.com/</link><description>Recent content in 余农场主 on 余农场主</description><generator>Hugo -- gohugo.io</generator><language>zh</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 29 Dec 2019 15:00:00 +0800</lastBuildDate><atom:link href="//blog.yoloyi.com/" rel="self" type="application/rss+xml"/><item><title>关于</title><link>//blog.yoloyi.com/about/</link><pubDate>Sun, 29 Dec 2019 15:00:00 +0800</pubDate><guid>//blog.yoloyi.com/about/</guid><description>
+&lt;h1 id=&#34;个人简历&#34;&gt;个人简历&lt;/h1&gt;
+&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;:(fas fa-rocket): 性能优化：在 &lt;a href=&#34;https://developers.google.com/speed/pagespeed/insights&#34;&gt;Google PageSpeed Insights&lt;/a&gt; 中， &lt;sup&gt;99&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; 的移动设备得分和 &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; 的桌面设备得分&lt;/li&gt;
-&lt;li&gt;:(fab fa-searchengin): 使用基于 JSON-LD 格式 的 SEO SCHEMA 文件进行 SEO 优化&lt;/li&gt;
-&lt;li&gt;:(fab fa-google): 支持 &lt;a href=&#34;https://analytics.google.com/analytics&#34;&gt;Google Analytics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;:(fas fa-search): 支持搜索引擎的网站验证 (Google, Bind, Yandex and Baidu)&lt;/li&gt;
-&lt;li&gt;:(fas fa-tachometer-alt): 支持所有第三方库的 CDN&lt;/li&gt;
-&lt;li&gt;:(far fa-images): 基于 &lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34;&gt;lazysizes&lt;/a&gt; 自动转换图片为懒加载&lt;/li&gt;
+&lt;li&gt;手机：187****6887&lt;/li&gt;
+&lt;li&gt;Email：me@yoloyi.com&lt;/li&gt;
+&lt;li&gt;QQ / 微信号：635161889 / uyy1101&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;外观和布局&#34;&gt;外观和布局&lt;/h4&gt;
+&lt;h2 id=&#34;基本信息&#34;&gt;基本信息&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;:(fas fa-desktop): / :(fas fa-mobile): 响应式布局&lt;/li&gt;
-&lt;li&gt;:(fas fa-moon): / :(fas fa-sun): 模式&lt;/li&gt;
-&lt;li&gt;:(fas fa-layer-group): 页面和列表保持一致的视觉样式&lt;/li&gt;
-&lt;li&gt;:(fas fa-ellipsis-h): 支持分页&lt;/li&gt;
-&lt;li&gt;:(far fa-list-alt): 易用和自动展开的文章目录，同时适配移动端&lt;/li&gt;
-&lt;li&gt;:(fas fa-language): 支持多语言和国际化&lt;/li&gt;
-&lt;li&gt;:(fab fa-css3-alt): 美观的 CSS 动画&lt;/li&gt;
+&lt;li&gt;余勇 / 男 / 25岁 (1995年生) / 已婚&lt;/li&gt;
+&lt;li&gt;专科 / 江西环境工程职业学院（物联网应用技术）&lt;/li&gt;
+&lt;li&gt;工作年限：4年&lt;/li&gt;
+&lt;li&gt;技术博客：&lt;a href=&#34;http://blog.yoloyi.com/&#34;&gt;http://blog.yoloyi.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github：&lt;a href=&#34;http://github.com/yoloyi&#34;&gt;http://github.com/yoloyi&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;社交和评论系统&#34;&gt;社交和评论系统&lt;/h4&gt;
+&lt;h2 id=&#34;求职意向&#34;&gt;求职意向&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;:(far fa-user): 支持 &lt;a href=&#34;https://gravatar.com&#34;&gt;Gravatar&lt;/a&gt; 头像&lt;/li&gt;
-&lt;li&gt;:(fas fa-user-circle): 支持本地头像&lt;/li&gt;
-&lt;li&gt;:(far fa-id-card): 支持多达 54 种社交链接&lt;/li&gt;
-&lt;li&gt;:(fas fa-share-square): 支持文章分享&lt;/li&gt;
-&lt;li&gt;:(far fa-comment): 支持 &lt;a href=&#34;https://disqus.com&#34;&gt;Disqus&lt;/a&gt; 评论系统&lt;/li&gt;
-&lt;li&gt;:(far fa-comment-dots): 支持 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 评论系统&lt;/li&gt;
-&lt;li&gt;:(far fa-comment-alt): 支持 &lt;a href=&#34;https://valine.js.org/&#34;&gt;Valine&lt;/a&gt; 评论系统&lt;/li&gt;
+&lt;li&gt;无
+&lt;!--
+; - 期望职位：PHP高级程序员，后台开发工程师
+; - 期望薪资：税前月薪18k~25k，特别喜欢的公司可例外
+; - 期望城市：上海 / 深圳
+--&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;扩展功能&#34;&gt;扩展功能&lt;/h4&gt;
+&lt;h2 id=&#34;工作经历&#34;&gt;工作经历&lt;/h2&gt;
+&lt;!--
+### 上海柏为科技有限公司 （ 2018 年8月 ~ 至今 ）
+#### HeavenGifts
+我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+#### Medusa
+#### 其他项目
+（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。)
+### 丹阳兴阳重庆分公司 （ 2018 年8月 ~ 至今 ）
+#### Firmoo.com
+我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
+#### 内部邮件服务系统
+#### 其他项目
+（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）
+--&gt;
+&lt;h2 id=&#34;开源项目和作品&#34;&gt;开源项目和作品&lt;/h2&gt;
+&lt;h3 id=&#34;参与开源项目&#34;&gt;参与开源项目&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;:(fas fa-code): 基于 Hugo 使用的 chroma 进行代码高亮&lt;/li&gt;
-&lt;li&gt;:(fab fa-font-awesome): 使用 &lt;a href=&#34;https://fontawesome.com/&#34;&gt;Font Awesome&lt;/a&gt; 图标的扩展 Markdown 语法&lt;/li&gt;
-&lt;li&gt;:(fas fa-square-root-alt): 支持基于 &lt;a href=&#34;https://katex.org/&#34;&gt;Katex&lt;/a&gt; 的数学公式&lt;/li&gt;
-&lt;li&gt;:(fas fa-project-diagram): 支持基于 &lt;a href=&#34;https://github.com/knsv/mermaid&#34;&gt;mermaid&lt;/a&gt; 的图表和流程图生成功能&lt;/li&gt;
-&lt;li&gt;:(fas fa-music): 支持基于 &lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34;&gt;APlayer&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/metowolf/MetingJS&#34;&gt;MetingJS&lt;/a&gt; 的内嵌音乐播放器&lt;/li&gt;
-&lt;li&gt;:(fas fa-tv): 支持内嵌 Bilibili 视频&lt;/li&gt;
-&lt;li&gt;:(far fa-bell): 支持多种提醒样式的 shortcode&lt;/li&gt;
-&lt;li&gt;:(fas fa-align-left): 支持自定义对齐和浮动方式的 shortcode&lt;/li&gt;
-&lt;li&gt;:(fas fa-i-cursor): 支持基于 &lt;a href=&#34;https://typeitjs.com/&#34;&gt;TypeIt&lt;/a&gt; 的打字动画&lt;/li&gt;
-&lt;li&gt;:(far fa-clock): 支持基于 &lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34;&gt;jQuery.countdown&lt;/a&gt; 的倒计时动画&lt;/li&gt;
-&lt;li&gt;:(fas fa-arrow-up): 支持基于 &lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34;&gt;Smooth Scroll&lt;/a&gt; 的回到顶部动画&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/formulahendry/vscode-ycy&#34;&gt;vscode-ycy&lt;/a&gt;：在 VS Code 中连续写代码一小时提醒&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;许可协议&#34;&gt;许可协议&lt;/h3&gt;
-&lt;p&gt;LoveIt 根据 MIT 许可协议授权。&lt;/p&gt;
-&lt;p&gt;更多信息请查看 &lt;a href=&#34;https://github.com/dillonzq/LoveIt/blob/master/LICENSE&#34;&gt;LICENSE 文件&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;感谢以下在主题中使用过的项目的作者：&lt;/p&gt;
+&lt;h3 id=&#34;技术文章&#34;&gt;技术文章&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://fontawesome.com/&#34;&gt;Font Awesome&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://daneden.github.io/animate.css/&#34;&gt;Animate.css&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/aFarkas/lazysizes&#34;&gt;lazysizes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/cferdinandi/smooth-scroll&#34;&gt;Smooth Scroll&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://typeitjs.com/&#34;&gt;TypeIt&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/jquery/jquery&#34;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hilios/jQuery.countdown&#34;&gt;jQuery.countdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://katex.org/&#34;&gt;Katex&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/knsv/mermaid&#34;&gt;mermaid&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/MoePlayer/APlayer&#34;&gt;APlayer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/metowolf/MetingJS&#34;&gt;MetingJS&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://valine.js.org/&#34;&gt;Valine&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description></item></channel></rss>
+&lt;li&gt;&lt;a href=&#34;https://github.com/yoloyi/go-exercise-example&#34;&gt;Go-Micro 使用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;演讲和讲义&#34;&gt;演讲和讲义&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;技能清单&#34;&gt;技能清单&lt;/h2&gt;
+&lt;p&gt;熟练使用的技能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;后台开发：PHP / Golang&lt;/li&gt;
+&lt;li&gt;Web框架：Laravel / Phalcon / Gin&lt;/li&gt;
+&lt;li&gt;Micro Framework：Go-Micro / GRPC&lt;/li&gt;
+&lt;li&gt;前端框架：Vue&lt;/li&gt;
+&lt;li&gt;数据库相关：MySQL / Redis / Memcached / ElasticSearch / canal&lt;/li&gt;
+&lt;li&gt;版本管理和自动化部署工具：Git / Gitlab CI / Go Mod / Composer&lt;/li&gt;
+&lt;li&gt;单元测试：PHPUnit / Go-Test&lt;/li&gt;
+&lt;li&gt;容器： k8s / Docker / Docker-Compose&lt;/li&gt;
+&lt;li&gt;分布式相关：etcd&lt;/li&gt;
+&lt;li&gt;云和开放平台：GAE / AWS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;学习过的技能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;后台开发：Java / Python&lt;/li&gt;
+&lt;li&gt;etc
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;致谢&#34;&gt;致谢&lt;/h2&gt;
+&lt;p&gt;感谢您花时间阅读我的简历，期待能有机会和您共事。&lt;/p&gt;</description></item><item><title>Posts</title><link>//blog.yoloyi.com/posts/</link><pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate><guid>//blog.yoloyi.com/posts/</guid><description/></item></channel></rss>
