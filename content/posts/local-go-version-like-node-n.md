@@ -1,0 +1,58 @@
+---
+title: "如何在本地环境安装管理多个 Golang 版本"
+date: 2019-12-17T00:00:00+08:00
+draft: false
+description: "在同一台计算机上安装多个Go版本可能很有用，以确保软件包的测试可以通过多个Go版本。一旦安装了一个Go版本，就可以如下安装另一个版本"
+show_in_homepage: true
+show_description: false
+license: ''
+
+tags: ["Golang"]
+categories: ["Golang"]
+
+featured_image: ''
+featured_image_preview: ''
+
+comment: true
+toc: true
+autoCollapseToc: true
+math: false
+---
+
+## 如何在本地环境管理多个 Golang 版本
+
+> 在同一台计算机上安装多个Go版本可能很有用，以确保软件包的测试可以通过多个Go版本。一旦安装了一个Go版本，就可以如下安装另一个版本
+
+
+前提需要在本地环境已经安装了一个 Golang 的版本
+
+## 如何安装其他版本
+
+例如，我们本机环境是 1.13，我们需要下载1.12的版本
+```bash
+$ go get golang.org/dl/go1.12.14
+$ go1.12.14 download 
+```
+
+等待安装结束后，以上就在本地使用的 go 1.12.14 版本
+
+## 如何使用？
+
+与你本地使用的 go 一样，不过在go 后面接上版本号，例如上面的例子
+
+```
+$ go1.12.14 env
+```
+
+如果你要安装其他版本的，你可以看[官方版本](https://godoc.org/golang.org/dl#pkg-subdirectories)下有的版本。
+随着更换版本即可
+
+##  如何卸载
+
+**$ go get golang.org/dl/go1.12.14**
+
+这个命令 会在你的家目录下面 生成一个 sdk/go1.12.14 文件，这个地方就是你的 go1.12.14 的 GOROOT
+
+删除 go1.12.14 即可
+
+然后删除你本机 GOBIN 里面的 go1.12.14 就可以。

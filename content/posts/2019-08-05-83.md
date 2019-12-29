@@ -14,7 +14,7 @@ featured_image: ''
 featured_image_preview: ''
 
 comment: true
-toc: false
+toc: true
 autoCollapseToc: true
 math: false
 ---
