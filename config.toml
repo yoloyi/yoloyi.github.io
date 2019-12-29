@@ -111,7 +111,7 @@ staticDir = ["static", "public"]               # static directories
     email = ""
 
   [params.social]                                        # Social Info in home page
-    GitHub = "//github.com/yoloyi"
+    GitHub = "yoloyi"
     Email = "me@yoloyi.com"
     #Linkedin = "xxxx"
     #Twitter = "xxxx"
