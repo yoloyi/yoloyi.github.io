@@ -7,8 +7,8 @@ show_in_homepage: true
 show_description: false
 license: ''
 
-tags: ["leetcode"]
-categories: ["数据结构与算法"]
+tags: ["Leetcode"]
+categories: ["数据结构与算法", "Leetcode"]
 
 featured_image: ''
 featured_image_preview: ''
