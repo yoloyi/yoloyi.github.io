@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on 余农场主</title><link>//blog.yoloyi.com/tags/golang/</link><description>Recent content in Golang on 余农场主</description><generator>Hugo -- gohugo.io</generator><language>zh</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0800</lastBuildDate><atom:link href="//blog.yoloyi.com/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在本地环境安装管理多个 Golang 版本</title><link>//blog.yoloyi.com/2019/12/17/local-go-version-like-node-n/</link><pubDate>Tue, 17 Dec 2019 00:00:00 +0800</pubDate><guid>//blog.yoloyi.com/2019/12/17/local-go-version-like-node-n/</guid><description>如何在本地环境管理多个 Golang 版本 在同一台计算机上安装多个Go版本可能很有用，以确保软件包的测试可以通过多个Go版本。一旦安装了一个Go版本，就可以如下安装另一个版本
+前提需要在本地环境已经安装了一个 Golang 的版本
+如何安装其他版本 例如，我们本机环境是 1.13，我们需要下载1.12的版本
+1 2 $ go get golang.org/dl/go1.12.14 $ go1.12.14 download 等待安装结束后，以上就在本地使用的 go 1.12.14 版本
+如何使用？ 与你本地使用的 go 一样，不过在go 后面接上版本号，例如上面的例子
+1 $ go1.12.14 env 如果你要安装其他版本的，你可以看官方版本下有的版本。 随着更换版本即可
+如何卸载 $ go get golang.org/dl/go1.12.14
+这个命令 会在你的家目录下面 生成一个 sdk/go1.12.14 文件，这个地方就是你的 go1.12.14 的 GOROOT
+删除 go1.12.14 即可
+然后删除你本机 GOBIN 里面的 go1.12.14 就可以。</description></item><item><title>Go语言 简单实用 GRP</title><link>//blog.yoloyi.com/2019/12/13/go-use-grpc/</link><pubDate>Fri, 13 Dec 2019 00:00:00 +0800</pubDate><guid>//blog.yoloyi.com/2019/12/13/go-use-grpc/</guid><description>Golang Grpc 例子 GitHub源码地址
+如何运行 helloworld 例子 helloworld 1、$ git clone git@github.com:yoloyi/go-exercise-example.git
+2、$ cd /go-exercise-example/grpc
+3、$ go install
+4、$ go run helloworld/cmd/service/main.go
+5、$ go run helloworld/cmd/client/main.go world
+例子学习 protoc 是 Protocol Buffers 的一个工具，负责生成协议的序列化、反序列化相应语言的代码
+1、下载 protoc
+1 https://github.com/protocolbuffers/protobuf/releases 选择对应的本机的环境，下载相应的 protoc
+2、把bin/protoc 移动到 PATH 目录下
+1 mv bin/protoc /usr/local/bin 3、检查 protoc 是否正确移动
+1 which protoc Golang 1、安装 grpc
+1 go get -u google.</description></item></channel></rss>

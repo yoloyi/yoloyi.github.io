@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>项目管理 on 余农场主</title><link>//blog.yoloyi.com/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link><description>Recent content in 项目管理 on 余农场主</description><generator>Hugo -- gohugo.io</generator><language>zh</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0800</lastBuildDate><atom:link href="//blog.yoloyi.com/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml"/><item><title>软件工程概述</title><link>//blog.yoloyi.com/2019/12/17/ruanjian-gongcheng/</link><pubDate>Tue, 17 Dec 2019 00:00:00 +0800</pubDate><guid>//blog.yoloyi.com/2019/12/17/ruanjian-gongcheng/</guid><description>软件工程概述 从工程学的角度人事软件在大型系统中的设计和应用，让软件工程师具有从事工程实践所需的专业能力。
+需求定义和分析 权衡和选择技术方案 使用 UML 建模 开发 高质量 的软件 运用软件工程工具 团队协作开发 谈判与沟通 为什么要学软件工程？ 对软件开发的认识：程序 -&amp;gt; 系统
+对程序员的认识：程序员 -&amp;gt; 软件工程师
+软件工程的产生与发展 软件无处不在，为我们生活创造了无限的精彩。在当今的信息时代，世界变得更加 “智辉”，万事万物间感知化、互联化和智能化的成都不断加深。 软件工程为这一切做出了巨大的贡献，随着该学科的成熟与发展，其未来的贡献将不可限量。 在软件工程早期是一门课，连专业方向也算不上，经过软件的日益发展，现在成为了一门独立的学科。 软件工程的未来，还会发展的更快，未来会想着万物互联、感知、智能的方向发展。
+软件的发展历史 1949 ~ 1959 独立变成服务 代表：CSC
+特点：为单个客户提供定制软件，包扩技术咨询、软件编程、和维护；软件的销售是一次性的。
+这个时期的软件都是跟着硬件搭配的，比如我买个机器，它要干活，他就要相应的软件来搭配，比如我们的机器要一个科学计算的功能，我们就要找人定制一个科学计算的软件。希望做其他的，我们就定制其他的软件。
+1959 ~ 1969 软件产品 代表：Informatics
+特点：保护知识产权以许可证的方式销售软件
+有一群人也就是做这个定制化软件的服务，这个定制化（外包）的公司在为多个公司服务的过程中就发现，多家公司有类似的功能，所以他们把同样的功能，抽离出来做成一个面向收费的项目。
+1969 ~ 1981 企业级解决方案 代表：Oracle
+特点：面向领域，以企业解决方案供应商面目出现
+1981 ~ 1991 面向大众的套件 代表：Microsoft
+特点：基于个人计算服务大众市场
+Microsoft 做出来 PC 机后，就有了个人使用 PC 机。这样 Microsoft 创出来了一个面向个人的商业模式。</description></item></channel></rss>
