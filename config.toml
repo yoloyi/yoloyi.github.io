@@ -66,7 +66,7 @@ staticDir = ["static", "public"]               # static directories
   home_mode = "post"                                     # [post, other] home mode
   home_paginate = 6                                      # special amount of posts in each home post page
   avatar = "images/avatar.png"                           # URL of avatar shown in home page
-  subtitle = "太阳虽远，必有太阳"                           # subtitle shown in home page
+  subtitle = "太阳虽远，必有太阳。"                           # subtitle shown in home page
 
   socialShare = true                                     # whether to show social share links in post page
 
