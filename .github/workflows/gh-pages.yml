@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - develop
+    paths-ignore:
+      - '**-draft.md'
+      - '**.png'
 
 jobs:
   build-deploy:
@@ -11,8 +14,6 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
-
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
