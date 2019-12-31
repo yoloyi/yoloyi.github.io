@@ -55,7 +55,7 @@ staticDir = ["static", "data"]               # static directories
     identifier = "about"
     name = "About"
     url = "about"
-    weight = 5
+    weight = 4
 
 
 [params]
