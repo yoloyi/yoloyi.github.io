@@ -87,7 +87,7 @@ staticDir = ["static", "data"]               # static directories
   linkToMarkdown = true                                  # whether to show link to Raw Markdown content of the post
 
                                                       #### site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  google_verification = ""
+  google_verification = "QMPoyFVHHQy-yniYOZv2wij2iLvSSoHUW6nXckK0sak"
   bing_verification = ""
   yandex_verification = ""
   pinterest_verification = ""
