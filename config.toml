@@ -91,7 +91,7 @@ staticDir = ["static", "data"]               # static directories
   bing_verification = ""
   yandex_verification = ""
   pinterest_verification = ""
-  baidu_verification = "6GkDhoZ3Pq"
+  baidu_verification = "mFvUum6lSq"
 
   [params.cdn]                                       #### CSS and JS Files CDN
     fontawesome_free_css = ''                           # for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
