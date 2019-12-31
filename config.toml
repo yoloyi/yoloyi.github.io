@@ -1,4 +1,4 @@
-baseURL = "blog.yoloyi.com/"
+baseURL = "https://blog.yoloyi.com/"
 languageCode = "zh"                                      # website language
 defaultContentLanguage = "zh"                            # [en, zh, ...] determines which i18n file to use
 title = "余农场主"                                   # website title
