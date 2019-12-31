@@ -1,23 +1,28 @@
-<!doctype html><html lang=zh><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Go语言 简单实用 GRP | 余农场主</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=Description content="Golang 使用 GRPC 和 GRPC proto 使用"><meta name=google-site-verification content="googleee59c661cafb0f1e.html"><link rel=prev href=https//blog.yoloyi.com/2019/08/02/2019-09-18-two-sum/><link rel=next href=https//blog.yoloyi.com/2019/12/13/elasticsearch-1/><link rel=canonical href=https//blog.yoloyi.com/2019/12/13/go-use-grpc/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go语言 简单实用 GRP"><meta name=twitter:description content="Golang 使用 GRPC 和 GRPC proto 使用"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go语言 简单实用 GRP","mainEntityOfPage":{"@type":"WebPage","@id":"https\/\/blog.yoloyi.com\/2019\/12\/13\/go-use-grpc\/"},"image":{"@type":"ImageObject","url":"https\/blog.yoloyi.com\/cover.png","width":800,"height":600},"genre":"posts","keywords":"Golang, GRPC","wordcount":1140,"url":"https\/\/blog.yoloyi.com\/2019\/12\/13\/go-use-grpc\/","datePublished":"2019-12-13T00:00:00\x2b08:00","dateModified":"2019-12-29T22:03:59\x2b08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"余农场主","logo":{"@type":"ImageObject","url":"https\/blog.yoloyi.com\/logo.png","width":127,"height":40}},"description":"Golang 使用 GRPC 和 GRPC proto 使用"}</script><link rel=stylesheet href=/https/blog.yoloyi.com/css/style.min.css><link rel=stylesheet href=/https/blog.yoloyi.com/css/lib/fontawesome-free/all.min.min.css><link rel=stylesheet href=/https/blog.yoloyi.com/css/lib/animate/animate.min.min.css></head><body><script>window.isDark=(window.localStorage&&window.localStorage.getItem('theme'))==='dark';window.isDark&&document.body.classList.add('dark-theme');</script><div class=wrapper><nav class=navbar><div class=navbar-container><div class="navbar-header animated bounceIn"><a href=https//blog.yoloyi.com/>余农场主</a></div><div class=navbar-menu><a class=menu-item href=https/blog.yoloyi.com/posts>Posts</a>
-<a class=menu-item href=https/blog.yoloyi.com/tags>Tags</a>
-<a class=menu-item href=https/blog.yoloyi.com/categories>Categories</a>
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge,chrome=1"><title>Go语言 简单实用 GRP | 余农场主</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta name=Description content="Golang 使用 GRPC 和 GRPC proto 使用"><meta name=google-site-verification content="googleee59c661cafb0f1e.html"><link rel=prev href=blog.yoloyi.com/2019/08/02/2019-09-18-two-sum/><link rel=next href=blog.yoloyi.com/2019/12/13/elasticsearch-1/><link rel=canonical href=blog.yoloyi.com/2019/12/13/go-use-grpc/><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go语言 简单实用 GRP"><meta name=twitter:description content="Golang 使用 GRPC 和 GRPC proto 使用"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Go语言 简单实用 GRP","mainEntityOfPage":{"@type":"WebPage","@id":"blog.yoloyi.com\/2019\/12\/13\/go-use-grpc\/"},"image":{"@type":"ImageObject","url":"blog.yoloyi.com\/cover.png","width":800,"height":600},"genre":"posts","keywords":"Golang, GRPC","wordcount":1148,"url":"blog.yoloyi.com\/2019\/12\/13\/go-use-grpc\/","datePublished":"2019-12-13T00:00:00\x2b08:00","dateModified":"2019-12-29T22:03:59\x2b08:00","license":"This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher":{"@type":"Organization","name":"余农场主","logo":{"@type":"ImageObject","url":"blog.yoloyi.com\/logo.png","width":127,"height":40}},"description":"Golang 使用 GRPC 和 GRPC proto 使用"}</script><link rel=stylesheet href=/blog.yoloyi.com/css/style.min.css><link rel=stylesheet href=/blog.yoloyi.com/css/lib/fontawesome-free/all.min.min.css><link rel=stylesheet href=/blog.yoloyi.com/css/lib/animate/animate.min.min.css></head><body><script>window.isDark=(window.localStorage&&window.localStorage.getItem('theme'))==='dark';window.isDark&&document.body.classList.add('dark-theme');</script><div class=wrapper><nav class=navbar><div class=navbar-container><div class="navbar-header animated bounceIn"><a href=blog.yoloyi.com/>余农场主</a></div><div class=navbar-menu><a class=menu-item href=blog.yoloyi.com/posts>Posts</a>
+<a class=menu-item href=blog.yoloyi.com/tags>Tags</a>
+<a class=menu-item href=blog.yoloyi.com/categories>Categories</a>
 <a class=menu-item href=https://juejin.im/user/5e05c80e518825127f086479>JueJin</a>
-<a class=menu-item href=https/blog.yoloyi.com/about>About</a>
-<a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a></div></div></nav><nav class=navbar-mobile><div class=navbar-container><div class=navbar-header><div class="navbar-header-title animated bounceIn"><a href=https//blog.yoloyi.com/>余农场主</a></div><div class=menu-toggle id=menu-toggle><span></span><span></span><span></span></div></div><div class=navbar-menu id=mobile-menu><a class=menu-item href=https/blog.yoloyi.com/posts>Posts</a>
-<a class=menu-item href=https/blog.yoloyi.com/tags>Tags</a>
-<a class=menu-item href=https/blog.yoloyi.com/categories>Categories</a>
+<a class=menu-item href=blog.yoloyi.com/about>About</a>
+<a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a></div></div></nav><nav class=navbar-mobile><div class=navbar-container><div class=navbar-header><div class="navbar-header-title animated bounceIn"><a href=blog.yoloyi.com/>余农场主</a></div><div class=menu-toggle id=menu-toggle><span></span><span></span><span></span></div></div><div class=navbar-menu id=mobile-menu><a class=menu-item href=blog.yoloyi.com/posts>Posts</a>
+<a class=menu-item href=blog.yoloyi.com/tags>Tags</a>
+<a class=menu-item href=blog.yoloyi.com/categories>Categories</a>
 <a class=menu-item href=https://juejin.im/user/5e05c80e518825127f086479>JueJin</a>
-<a class=menu-item href=https/blog.yoloyi.com/about>About</a>
-<a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a></div></div></nav><main class=main><div class=container><article class=post-warp><h1 class="post-title animated flipInX">Go语言 简单实用 GRP</h1><div class=post-meta><div class=post-meta-main><a class=author href=https//blog.yoloyi.com/ rel=author><i class="fas fa-user-circle fa-fw"></i>余农场主&nbsp;</a>
+<a class=menu-item href=blog.yoloyi.com/about>About</a>
+<a href=javascript:void(0); class=theme-switch><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a></div></div></nav><main class=main><div class=container><article class=post-warp><h1 class="post-title animated flipInX">Go语言 简单实用 GRP</h1><div class=post-meta><div class=post-meta-main><a class=author href=blog.yoloyi.com/ rel=author><i class="fas fa-user-circle fa-fw"></i>余农场主&nbsp;</a>
 <span class=post-category>收录于
-<i class="far fa-folder fa-fw"></i><a href=https//blog.yoloyi.com/categories/golang/>Golang</a></span></div><div class=post-meta-other><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-13>2019-12-13</time>&nbsp;
-<i class="fas fa-pencil-alt fa-fw"></i>约 1140 字&nbsp;
-<i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;</div></div><div class=post-toc id=post-toc><h2 class=post-toc-title>目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><a href=#golang-grpc-例子>Golang Grpc 例子</a><ul><li><a href=#如何运行-helloworld-例子>如何运行 helloworld 例子</a><ul><li><a href=#helloworld>helloworld</a></li></ul></li><li><a href=#例子学习>例子学习</a></li><li><a href=#golang>Golang</a></li><li><a href=#如何使用-protoc>如何使用 <code>protoc</code></a></li><li><a href=#helloworld-grpc>HelloWorld Grpc</a></li></ul></li></ul></nav></div></div><div class=post-toc-mobile id=post-toc-mobile><details><summary><div class=post-toc-title><span>目录</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary><div class=post-toc-content><nav id=TableOfContentsMobile><ul><li><a href=#golang-grpc-例子>Golang Grpc 例子</a><ul><li><a href=#如何运行-helloworld-例子>如何运行 helloworld 例子</a><ul><li><a href=#helloworld>helloworld</a></li></ul></li><li><a href=#例子学习>例子学习</a></li><li><a href=#golang>Golang</a></li><li><a href=#如何使用-protoc>如何使用 <code>protoc</code></a></li><li><a href=#helloworld-grpc>HelloWorld Grpc</a></li></ul></li></ul></nav></div></details></div><div class=post-content><a class=post-dummy-target id=golang-grpc-例子></a><h1>Golang Grpc 例子</h1><p><a href=https://github.com/yoloyi/go-exercise-example>GitHub源码地址</a></p><a class=post-dummy-target id=如何运行-helloworld-例子></a><h2>如何运行 helloworld 例子</h2><a class=post-dummy-target id=helloworld></a><h3>helloworld</h3><p>1、<code>$ git clone git@github.com:yoloyi/go-exercise-example.git</code></p><p>2、<code>$ cd /go-exercise-example/grpc</code></p><p>3、<code>$ go install</code></p><p>4、<code>$ go run helloworld/cmd/service/main.go</code></p><p>5、<code>$ go run helloworld/cmd/client/main.go world</code></p><a class=post-dummy-target id=例子学习></a><h2>例子学习</h2><blockquote><p>protoc 是 Protocol Buffers 的一个工具，负责生成协议的序列化、反序列化相应语言的代码</p></blockquote><p>1、下载 protoc</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>https://github.com/protocolbuffers/protobuf/releases</code></pre></td></tr></table></div></div><p>选择对应的本机的环境，下载相应的 <code>protoc</code></p><p>2、把bin/protoc 移动到 PATH 目录下</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>mv bin/protoc /usr/local/bin</code></pre></td></tr></table></div></div><p>3、检查 <code>protoc</code> 是否正确移动</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>which protoc</code></pre></td></tr></table></div></div><a class=post-dummy-target id=golang></a><h2>Golang</h2><p>1、安装 grpc</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>go get -u google.golang.org/grpc</code></pre></td></tr></table></div></div><p>2、安装 protoc 插件 protoc-gen-go</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><span class=lnt>1
-</span></pre></td><td class=lntd><pre class=chroma>go get -u github.com/golang/protobuf/protoc-gen-go</pre></td></tr></table></div></div><p>3、检查 <code>GOBIN</code> 是否设置，以及 <code>GOBIN</code> 是否加入到 PATH 里面</p><a class=post-dummy-target id=如何使用-protoc></a><h2>如何使用 <code>protoc</code></h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt> 1
+<i class="far fa-folder fa-fw"></i><a href=blog.yoloyi.com/categories/golang/>Golang</a></span></div><div class=post-meta-other><i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-13>2019-12-13</time>&nbsp;
+<i class="fas fa-pencil-alt fa-fw"></i>约 1148 字&nbsp;
+<i class="far fa-clock fa-fw"></i>预计阅读 6 分钟&nbsp;</div></div><div class=post-toc id=post-toc><h2 class=post-toc-title>目录</h2><div class=post-toc-content><nav id=TableOfContents><ul><li><a href=#-helloworld->如何运行 helloworld 例子</a><ul><li><a href=#helloworld>helloworld</a></li></ul></li><li><a href=#heading>例子学习</a></li><li><a href=#golang>Golang</a></li><li><a href=#-protoc>如何使用 protoc</a></li><li><a href=#helloworld-grpc>HelloWorld Grpc</a></li></ul></nav></div></div><div class=post-toc-mobile id=post-toc-mobile><details><summary><div class=post-toc-title><span>目录</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary><div class=post-toc-content><nav id=TableOfContentsMobile><ul><li><a href=#-helloworld->如何运行 helloworld 例子</a><ul><li><a href=#helloworld>helloworld</a></li></ul></li><li><a href=#heading>例子学习</a></li><li><a href=#golang>Golang</a></li><li><a href=#-protoc>如何使用 protoc</a></li><li><a href=#helloworld-grpc>HelloWorld Grpc</a></li></ul></nav></div></details></div><div class=post-content><a class=post-dummy-target id=golang-grpc-></a><h1>Golang Grpc 例子</h1><p><a href=https://github.com/yoloyi/go-exercise-example>GitHub源码地址</a></p><a class=post-dummy-target id=-helloworld-></a><h2>如何运行 helloworld 例子</h2><a class=post-dummy-target id=helloworld></a><h3>helloworld</h3><p>1、<code>$ git clone git@github.com:yoloyi/go-exercise-example.git</code></p><p>2、<code>$ cd /go-exercise-example/grpc</code></p><p>3、<code>$ go install</code></p><p>4、<code>$ go run helloworld/cmd/service/main.go</code></p><p>5、<code>$ go run helloworld/cmd/client/main.go world</code></p><a class=post-dummy-target id=heading></a><h2>例子学习</h2><blockquote><p>protoc 是 Protocol Buffers 的一个工具，负责生成协议的序列化、反序列化相应语言的代码</p></blockquote><p>1、下载 protoc</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>https://github.com/protocolbuffers/protobuf/releases
+</code></pre></td></tr></table></div></div><p>选择对应的本机的环境，下载相应的 <code>protoc</code></p><p>2、把bin/protoc 移动到 PATH 目录下</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>mv bin/protoc /usr/local/bin
+</code></pre></td></tr></table></div></div><p>3、检查 <code>protoc</code> 是否正确移动</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>which protoc
+</code></pre></td></tr></table></div></div><a class=post-dummy-target id=golang></a><h2>Golang</h2><p>1、安装 grpc</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>go get -u google.golang.org/grpc
+</code></pre></td></tr></table></div></div><p>2、安装 protoc 插件 protoc-gen-go</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-fallback data-lang=fallback>go get -u github.com/golang/protobuf/protoc-gen-go
+</code></pre></td></tr></table></div></div><p>3、检查 <code>GOBIN</code> 是否设置，以及 <code>GOBIN</code> 是否加入到 PATH 里面</p><a class=post-dummy-target id=-protoc></a><h2>如何使用 <code>protoc</code></h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -101,6 +106,7 @@
 </span><span class=lnt>82
 </span><span class=lnt>83
 </span><span class=lnt>84
+</span><span class=lnt>85
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>Usage: protoc <span class=o>[</span>OPTION<span class=o>]</span> PROTO_FILES
 Parse PROTO_FILES and generate output based on the options given:
   -IPATH, --proto_path<span class=o>=</span>PATH   Specify the directory in which to search <span class=k>for</span>
@@ -184,15 +190,19 @@ Parse PROTO_FILES and generate output based on the options given:
                               content of the file <span class=o>(</span>i.e., you cannot use
                               quotes, wildcards, escapes, commands, etc.<span class=o>)</span>.
                               Each line corresponds to a single argument,
-                              even <span class=k>if</span> it contains spaces.</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>protoc --go_out<span class=o>=</span>. <span class=o>{</span>PROTO_DIR<span class=o>}</span> </code></pre></td></tr></table></div></div><p>使用例子</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
+                              even <span class=k>if</span> it contains spaces.
+
+</code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>protoc --go_out<span class=o>=</span>. <span class=o>{</span>PROTO_DIR<span class=o>}</span> 
+</code></pre></td></tr></table></div></div><p>使用例子</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>protoc -I proto --go_out<span class=o>=</span><span class=nv>plugins</span><span class=o>=</span>grpc:./helloworld/proto helloworld.proto
 // -I 类似于 WORK_DIR，工作目录，proto 文件 去哪个文件里面找
 // --go_out 这个是 protoc-gen-go 的扩展，原本 protoc 里面是没有 go 的代码生成，我们需要安装这个插件
-// 后面接文件名字</code></pre></td></tr></table></div></div><a class=post-dummy-target id=helloworld-grpc></a><h2>HelloWorld Grpc</h2><p>1、新建 helloworld.proto</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-proto data-lang=proto><span class=lnt> 1
+// 后面接文件名字
+</code></pre></td></tr></table></div></div><a class=post-dummy-target id=helloworld-grpc></a><h2>HelloWorld Grpc</h2><p>1、新建 helloworld.proto</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -212,22 +222,23 @@ Parse PROTO_FILES and generate output based on the options given:
 </span><span class=lnt>18
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-proto data-lang=proto><span class=c1>// proto 版本，有 2，3两个版本。必须写
 </span><span class=c1></span><span class=n>syntax</span> <span class=o>=</span> <span class=s>&#34;proto3&#34;</span><span class=p>;</span> <span class=err>
-</span><span class=err>
+</span><span class=err></span><span class=err>
 </span><span class=err></span><span class=kn>package</span> <span class=nn>helloworld</span><span class=p>;</span><span class=err>
 </span><span class=err></span><span class=c1>// 注册 grpc 的方法
 </span><span class=c1></span><span class=err>
 </span><span class=err></span><span class=kd>service</span> <span class=n>Greeter</span> <span class=p>{</span> <span class=err>
-</span><span class=err></span>    <span class=k>rpc</span> <span class=n>SayHello</span> <span class=p>(</span><span class=n>HelloRequest</span><span class=p>)</span> <span class=k>returns</span> <span class=p>(</span><span class=n>HelloReply</span><span class=p>);</span><span class=err>
+</span><span class=err></span>    <span class=k>rpc</span> <span class=n>SayHello</span> <span class=p>(</span><span class=n>HelloRequest</span><span class=p>)</span> <span class=k>returns</span> <span class=p>(</span><span class=n>HelloReply</span><span class=p>)</span><span class=p>;</span><span class=err>
 </span><span class=err></span><span class=p>}</span><span class=err>
 </span><span class=err></span><span class=c1>// 请求参数
 </span><span class=c1></span><span class=kd>message</span> <span class=nc>HelloRequest</span> <span class=p>{</span><span class=err>
 </span><span class=err></span>    <span class=kt>string</span> <span class=n>name</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span><span class=err>
 </span><span class=err></span><span class=p>}</span><span class=err>
-</span><span class=err>
+</span><span class=err></span><span class=err>
 </span><span class=err></span><span class=c1>// 返回参数
 </span><span class=c1></span><span class=kd>message</span> <span class=nc>HelloReply</span> <span class=p>{</span> <span class=err>
 </span><span class=err></span>    <span class=kt>string</span> <span class=kd>message</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span><span class=err>
-</span><span class=err></span><span class=p>}</span></code></pre></td></tr></table></div></div><p>2、使用命令 <code>protoc -I helloworld/proto --go_out=plugins=grpc:./helloworld/proto helloworld.proto</code> 自动生成 <code>.pb.go</code> 代码</p><p>3、编写 <code>Service</code> 端</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-go data-lang=go><span class=lnt> 1
+</span><span class=err></span><span class=p>}</span><span class=err>
+</span></code></pre></td></tr></table></div></div><p>2、使用命令 <code>protoc -I helloworld/proto --go_out=plugins=grpc:./helloworld/proto helloworld.proto</code> 自动生成 <code>.pb.go</code> 代码</p><p>3、编写 <code>Service</code> 端</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -271,7 +282,11 @@ Parse PROTO_FILES and generate output based on the options given:
 </span><span class=lnt>42
 </span><span class=lnt>43
 </span><span class=lnt>44
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-go data-lang=go><span class=kn>package</span> <span class=nx>main</span>
+</span><span class=lnt>45
+</span><span class=lnt>46
+</span><span class=lnt>47
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-go data-lang=go>
+<span class=kn>package</span> <span class=nx>main</span>
 
 <span class=kn>import</span> <span class=p>(</span>
 	<span class=s>&#34;context&#34;</span>
@@ -290,31 +305,34 @@ Parse PROTO_FILES and generate output based on the options given:
 <span class=p>}</span>
 
 <span class=c1>// grpc 重写的方法
-</span><span class=c1>// 如果不重写，会出现 error
+</span><span class=c1></span><span class=c1>// 如果不重写，会出现 error
 </span><span class=c1></span><span class=kd>func</span> <span class=p>(</span><span class=nx>s</span> <span class=o>*</span><span class=nx>service</span><span class=p>)</span> <span class=nf>SayHello</span><span class=p>(</span><span class=nx>ctx</span> <span class=nx>context</span><span class=p>.</span><span class=nx>Context</span><span class=p>,</span> <span class=nx>in</span> <span class=o>*</span><span class=nx>pb</span><span class=p>.</span><span class=nx>HelloRequest</span><span class=p>)</span> <span class=p>(</span><span class=o>*</span><span class=nx>pb</span><span class=p>.</span><span class=nx>HelloReply</span><span class=p>,</span> <span class=kt>error</span><span class=p>)</span> <span class=p>{</span>
-	<span class=nx>str</span> <span class=o>:=</span> <span class=nx>fmt</span><span class=p>.</span><span class=nf>Sprintf</span><span class=p>(</span><span class=s>&#34;Hello %s&#34;</span><span class=p>,</span> <span class=nx>in</span><span class=p>.</span><span class=nf>GetName</span><span class=p>())</span>
+	<span class=nx>str</span> <span class=o>:=</span> <span class=nx>fmt</span><span class=p>.</span><span class=nf>Sprintf</span><span class=p>(</span><span class=s>&#34;Hello %s&#34;</span><span class=p>,</span> <span class=nx>in</span><span class=p>.</span><span class=nf>GetName</span><span class=p>(</span><span class=p>)</span><span class=p>)</span>
 	<span class=nx>log</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=nx>str</span><span class=p>)</span>
-	<span class=k>return</span> <span class=o>&amp;</span><span class=nx>pb</span><span class=p>.</span><span class=nx>HelloReply</span><span class=p>{</span><span class=nx>Message</span><span class=p>:</span> <span class=nx>str</span><span class=p>},</span> <span class=kc>nil</span>
+	<span class=k>return</span> <span class=o>&amp;</span><span class=nx>pb</span><span class=p>.</span><span class=nx>HelloReply</span><span class=p>{</span><span class=nx>Message</span><span class=p>:</span> <span class=nx>str</span><span class=p>}</span><span class=p>,</span> <span class=kc>nil</span>
 <span class=p>}</span>
 
-<span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
+<span class=kd>func</span> <span class=nf>main</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
 	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;-------------------&#34;</span><span class=p>)</span>
 	<span class=nx>lis</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>net</span><span class=p>.</span><span class=nf>Listen</span><span class=p>(</span><span class=s>&#34;tcp&#34;</span><span class=p>,</span> <span class=nx>port</span><span class=p>)</span>
 	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
 		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalln</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
 	<span class=p>}</span>
 
-	<span class=nx>s</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>NewServer</span><span class=p>()</span>
+	<span class=nx>s</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>NewServer</span><span class=p>(</span><span class=p>)</span>
 
 	<span class=c1>// 注册一个 grpc
-</span><span class=c1></span>	<span class=nx>pb</span><span class=p>.</span><span class=nf>RegisterGreeterServer</span><span class=p>(</span><span class=nx>s</span><span class=p>,</span> <span class=o>&amp;</span><span class=nx>service</span><span class=p>{})</span>
+</span><span class=c1></span>	<span class=nx>pb</span><span class=p>.</span><span class=nf>RegisterGreeterServer</span><span class=p>(</span><span class=nx>s</span><span class=p>,</span> <span class=o>&amp;</span><span class=nx>service</span><span class=p>{</span><span class=p>}</span><span class=p>)</span>
 	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;Hello world GRpc start&#34;</span><span class=p>)</span>
 	<span class=c1>// 等待阻塞
-</span><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>s</span><span class=p>.</span><span class=nf>Serve</span><span class=p>(</span><span class=nx>lis</span><span class=p>);</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
+</span><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>s</span><span class=p>.</span><span class=nf>Serve</span><span class=p>(</span><span class=nx>lis</span><span class=p>)</span><span class=p>;</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
 		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalf</span><span class=p>(</span><span class=s>&#34;failed to serve：%v&#34;</span><span class=p>,</span> <span class=nx>err</span><span class=p>)</span>
 	<span class=p>}</span>
 
-<span class=p>}</span></code></pre></td></tr></table></div></div><p>3、编写 <code>Client</code> 端</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-go data-lang=go><span class=lnt> 1
+<span class=p>}</span>
+
+
+</code></pre></td></tr></table></div></div><p>3、编写 <code>Client</code> 端</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -354,7 +372,9 @@ Parse PROTO_FILES and generate output based on the options given:
 </span><span class=lnt>38
 </span><span class=lnt>39
 </span><span class=lnt>40
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-go data-lang=go><span class=kn>package</span> <span class=nx>main</span>
+</span><span class=lnt>41
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-go data-lang=go>
+<span class=kn>package</span> <span class=nx>main</span>
 
 <span class=kn>import</span> <span class=p>(</span>
 	<span class=s>&#34;fmt&#34;</span>
@@ -371,40 +391,49 @@ Parse PROTO_FILES and generate output based on the options given:
 	<span class=nx>defaultName</span> <span class=kt>string</span> <span class=p>=</span> <span class=s>&#34;world&#34;</span>
 <span class=p>)</span>
 
-<span class=kd>func</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span>
-	<span class=nx>conn</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>Dial</span><span class=p>(</span><span class=nx>address</span><span class=p>,</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>WithInsecure</span><span class=p>())</span> <span class=c1>// 判断 grpc service 是否活着
+<span class=kd>func</span> <span class=nf>main</span><span class=p>(</span><span class=p>)</span> <span class=p>{</span>
+	<span class=nx>conn</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>Dial</span><span class=p>(</span><span class=nx>address</span><span class=p>,</span> <span class=nx>grpc</span><span class=p>.</span><span class=nf>WithInsecure</span><span class=p>(</span><span class=p>)</span><span class=p>)</span> <span class=c1>// 判断 grpc service 是否活着
 </span><span class=c1></span>
 	<span class=c1>// grpc.WithInsecure() 禁用传递安全型，
 </span><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
 		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalln</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
 	<span class=p>}</span>
-	<span class=k>defer</span> <span class=nx>conn</span><span class=p>.</span><span class=nf>Close</span><span class=p>()</span>
+	<span class=k>defer</span> <span class=nx>conn</span><span class=p>.</span><span class=nf>Close</span><span class=p>(</span><span class=p>)</span>
 	<span class=nx>c</span> <span class=o>:=</span> <span class=nx>pb</span><span class=p>.</span><span class=nf>NewGreeterClient</span><span class=p>(</span><span class=nx>conn</span><span class=p>)</span> <span class=c1>// 创建一个 client，这里的client 是 protoc 生成的
 </span><span class=c1></span>	<span class=nx>name</span> <span class=o>:=</span> <span class=nx>defaultName</span>
 	<span class=k>if</span> <span class=nb>len</span><span class=p>(</span><span class=nx>os</span><span class=p>.</span><span class=nx>Args</span><span class=p>)</span> <span class=p>&gt;</span> <span class=mi>1</span> <span class=p>{</span>
 		<span class=nx>name</span> <span class=p>=</span> <span class=nx>os</span><span class=p>.</span><span class=nx>Args</span><span class=p>[</span><span class=mi>1</span><span class=p>]</span>
 	<span class=p>}</span>
-	<span class=nx>ctx</span><span class=p>,</span> <span class=nx>cancel</span> <span class=o>:=</span> <span class=nx>context</span><span class=p>.</span><span class=nf>WithTimeout</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(),</span> <span class=nx>time</span><span class=p>.</span><span class=nx>Second</span><span class=p>)</span>
-	<span class=k>defer</span> <span class=nf>cancel</span><span class=p>()</span>
+	<span class=nx>ctx</span><span class=p>,</span> <span class=nx>cancel</span> <span class=o>:=</span> <span class=nx>context</span><span class=p>.</span><span class=nf>WithTimeout</span><span class=p>(</span><span class=nx>context</span><span class=p>.</span><span class=nf>Background</span><span class=p>(</span><span class=p>)</span><span class=p>,</span> <span class=nx>time</span><span class=p>.</span><span class=nx>Second</span><span class=p>)</span>
+	<span class=k>defer</span> <span class=nf>cancel</span><span class=p>(</span><span class=p>)</span>
 	<span class=nx>r</span><span class=p>,</span> <span class=nx>err</span> <span class=o>:=</span> <span class=nx>c</span><span class=p>.</span><span class=nf>SayHello</span><span class=p>(</span><span class=nx>ctx</span><span class=p>,</span> <span class=o>&amp;</span><span class=nx>pb</span><span class=p>.</span><span class=nx>HelloRequest</span><span class=p>{</span>
 		<span class=nx>Name</span><span class=p>:</span> <span class=nx>name</span><span class=p>,</span>
-	<span class=p>})</span> <span class=c1>// 调用Service 的 say hello 方法
+	<span class=p>}</span><span class=p>)</span> <span class=c1>// 调用Service 的 say hello 方法
 </span><span class=c1></span>	<span class=k>if</span> <span class=nx>err</span> <span class=o>!=</span> <span class=kc>nil</span> <span class=p>{</span>
 		<span class=nx>log</span><span class=p>.</span><span class=nf>Fatalln</span><span class=p>(</span><span class=nx>err</span><span class=p>)</span>
 	<span class=p>}</span>
-	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;Get Rpc request message&#34;</span><span class=p>,</span> <span class=nx>r</span><span class=p>.</span><span class=nf>GetMessage</span><span class=p>())</span>
-<span class=p>}</span></code></pre></td></tr></table></div></div><p>4、运行</p><p>首先我们要运行 service 使得 service 常驻。然后运行我们的 client 客户端就可以看到相应的返回结果。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
+	<span class=nx>fmt</span><span class=p>.</span><span class=nf>Println</span><span class=p>(</span><span class=s>&#34;Get Rpc request message&#34;</span><span class=p>,</span> <span class=nx>r</span><span class=p>.</span><span class=nf>GetMessage</span><span class=p>(</span><span class=p>)</span><span class=p>)</span>
+<span class=p>}</span>
+</code></pre></td></tr></table></div></div><p>4、运行</p><p>首先我们要运行 service 使得 service 常驻。然后运行我们的 client 客户端就可以看到相应的返回结果。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
-</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>$ go run helloworld/cmd/service/main.go
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>
+$ go run helloworld/cmd/service/main.go
 
 //out: -------------------
-// Hello world GRpc start</code></pre></td></tr></table></div></div><p>起一个新的窗口</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash><span class=lnt>1
+// Hello world GRpc start
+
+</code></pre></td></tr></table></div></div><p>起一个新的窗口</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
+</span><span class=lnt>4
 </span></code></pre></td><td class=lntd><pre class=chroma><code class=language-bash data-lang=bash>$ go run helloworld/cmd/client/main.go world
 
-//out: Get Rpc request message Hello world</code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>本文于 2019-12-29 更新</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=https//blog.yoloyi.com/2019/12/13/go-use-grpc/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href="//twitter.com/share?url=https%2f%2fblog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&amp;text=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP&amp;via=" target=_blank title="Share on Twitter"><i class="fab fa-twitter fa-fw"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=https%2f%2fblog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-fw"></i></a><a href="//reddit.com/submit?url=https%2f%2fblog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&amp;title=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP" target=_blank title="Share on Reddit"><i class="fab fa-reddit fa-fw"></i></a><a href="//service.weibo.com/share/share.php?url=https%2f%2fblog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&amp;appkey=&amp;title=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP" target=_blank title="Share on Weibo"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section><span class=tag><a href=https/blog.yoloyi.com/tags/golang/><i class="fas fa-tag fa-fw"></i>Golang</a></span>
-<span class=tag><a href=https/blog.yoloyi.com/tags/grpc/><i class="fas fa-tag fa-fw"></i>GRPC</a></span></section><section><span><a href=javascript:window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=https//blog.yoloyi.com/>主页</a></span></section></div><div class=post-nav><a href=https//blog.yoloyi.com/2019/08/02/2019-09-18-two-sum/ class=prev rel=prev title=两数之和><i class="fas fa-angle-left fa-fw"></i>两数之和</a>
-<a href=https//blog.yoloyi.com/2019/12/13/elasticsearch-1/ class=next rel=next title="ElasticSearch Api 使用">ElasticSearch Api 使用<i class="fas fa-angle-right fa-fw"></i></a></div></div><div class=post-comment><div id=gitalk-container></div><link rel=stylesheet href=/https/blog.yoloyi.com/css/lib/gitalk/gitalk.min.css><script src=/https/blog.yoloyi.com/js/lib/gitalk/gitalk.min.min.js></script><script type=text/javascript>var gitalk=new Gitalk({id:"2019-12-13 00:00:00 \x2b0800 \x2b0800",title:"Go语言 简单实用 GRP",clientID:"4427e2794d60382b9e11",clientSecret:"0ab62167fe35c96fc266ca0a081d22e81ed2c0e1",repo:"yoloyi.github.io",owner:"yoloyi",admin:["yoloyi"],body:decodeURI(location.href)});gitalk.render("gitalk-container");</script><noscript>Please enable JavaScript to view the <a href=https://github.com/gitalk/gitalk>comments powered by gitalk.</a></noscript></div></article></div></main><footer class=footer><div class=copyright><div class=copyright-line>由 <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a></div><div class=copyright-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2019</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=https//blog.yoloyi.com/>余农场主</a></span><span class=license>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer><script src=/https/blog.yoloyi.com/js/lib/jquery/jquery.slim.min.min.js></script><script src=/https/blog.yoloyi.com/js/lib/lazysizes/lazysizes.min.min.js></script><script src=/https/blog.yoloyi.com/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js></script><script>window.scroll=new SmoothScroll('[data-scroll]',{speed:300,speedAsDuration:true});</script><script src=/https/blog.yoloyi.com/js/blog.min.js></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-138453134-4','auto');ga('set','anonymizeIp',true);ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></div><a href=# class=dynamic-to-top id=dynamic-to-top data-scroll><span>&nbsp;</span></a></body></html>
+//out: Get Rpc request message Hello world
+
+</code></pre></td></tr></table></div></div></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>本文于 2019-12-29 更新</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md><span><a class=link-to-markdown href=blog.yoloyi.com/2019/12/13/go-use-grpc/index.md target=_blank>阅读原始文档</a></span></div><div class=post-info-share><span><a href="//twitter.com/share?url=blog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&text=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP&via=" target=_blank title="Share on Twitter"><i class="fab fa-twitter fa-fw"></i></a><a href="//www.facebook.com/sharer/sharer.php?u=blog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f" target=_blank title="Share on Facebook"><i class="fab fa-facebook-square fa-fw"></i></a><a href="//reddit.com/submit?url=blog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&title=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP" target=_blank title="Share on Reddit"><i class="fab fa-reddit fa-fw"></i></a><a href="//service.weibo.com/share/share.php?url=blog.yoloyi.com%2f2019%2f12%2f13%2fgo-use-grpc%2f&appkey=&title=Go%e8%af%ad%e8%a8%80%20%e7%ae%80%e5%8d%95%e5%ae%9e%e7%94%a8%20GRP" target=_blank title="Share on Weibo"><i class="fab fa-weibo fa-fw"></i></a></span></div></div></div><div class=post-info-more><section><span class=tag><a href=blog.yoloyi.com/tags/golang/><i class="fas fa-tag fa-fw"></i>Golang</a></span>
+<span class=tag><a href=blog.yoloyi.com/tags/grpc/><i class="fas fa-tag fa-fw"></i>GRPC</a></span></section><section><span><a href=javascript:window.history.back();>返回</a></span>&nbsp;|&nbsp;<span><a href=blog.yoloyi.com/>主页</a></span></section></div><div class=post-nav><a href=blog.yoloyi.com/2019/08/02/2019-09-18-two-sum/ class=prev rel=prev title=两数之和><i class="fas fa-angle-left fa-fw"></i>两数之和</a>
+<a href=blog.yoloyi.com/2019/12/13/elasticsearch-1/ class=next rel=next title="ElasticSearch Api 使用">ElasticSearch Api 使用<i class="fas fa-angle-right fa-fw"></i></a></div></div><div class=post-comment><div id=gitalk-container></div><link rel=stylesheet href=/blog.yoloyi.com/css/lib/gitalk/gitalk.min.css><script src=/blog.yoloyi.com/js/lib/gitalk/gitalk.min.min.js></script><script type=text/javascript>var gitalk=new Gitalk({id:"2019-12-13 00:00:00 \x2b0800 \x2b0800",title:"Go语言 简单实用 GRP",clientID:"4427e2794d60382b9e11",clientSecret:"0ab62167fe35c96fc266ca0a081d22e81ed2c0e1",repo:"yoloyi.github.io",owner:"yoloyi",admin:["yoloyi"],body:decodeURI(location.href)});gitalk.render("gitalk-container");</script><noscript>Please enable JavaScript to view the <a href=https://github.com/gitalk/gitalk>comments powered by gitalk.</a></noscript></div></article></div></main><footer class=footer><div class=copyright><div class=copyright-line>由 <a href=https://gohugo.io/ target=_blank rel="external nofollow noopener noreffer">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a></div><div class=copyright-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2019</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=blog.yoloyi.com/>余农场主</a></span><span class=license>&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href=https://creativecommons.org/licenses/by-nc/4.0/ target=_blank>CC BY-NC 4.0</a></span></div></div></footer><script src=/blog.yoloyi.com/js/lib/jquery/jquery.slim.min.min.js></script><script src=/blog.yoloyi.com/js/lib/lazysizes/lazysizes.min.min.js></script><script src=/blog.yoloyi.com/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js></script><script>window.scroll=new SmoothScroll('[data-scroll]',{speed:300,speedAsDuration:true});</script><script src=/blog.yoloyi.com/js/blog.min.js></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-138453134-4','auto');ga('set','anonymizeIp',true);ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></div><a href=# class=dynamic-to-top id=dynamic-to-top data-scroll><span>&nbsp;</span></a></body></html>
