@@ -87,11 +87,11 @@ staticDir = ["static", "data"]               # static directories
   linkToMarkdown = true                                  # whether to show link to Raw Markdown content of the post
 
                                                       #### site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  google_verification = "googleee59c661cafb0f1e.html"
+  google_verification = ""
   bing_verification = ""
   yandex_verification = ""
   pinterest_verification = ""
-  baidu_verification = ""
+  baidu_verification = "6GkDhoZ3Pq"
 
   [params.cdn]                                       #### CSS and JS Files CDN
     fontawesome_free_css = ''                           # for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
