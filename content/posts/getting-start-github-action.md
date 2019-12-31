@@ -2,7 +2,7 @@
 title: "GitHub Actions 入门"
 date: 2019-12-30T16:26:12+08:00
 lastmod: 2019-12-30T16:26:12+08:00
-draft: true
+draft: false
 description: "GitHub Actions 是 GitHub 的持续集成服务。在没有这个服务之前，我们一般使用 Travis CI 或者 GitHub CI 等工具来执行推送代码后的一些相关操作。"
 show_in_homepage: true
 show_description: true
