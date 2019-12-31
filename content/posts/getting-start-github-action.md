@@ -1,5 +1,5 @@
 ---
-title: "GitHub Actions 入门到实战"
+title: "GitHub Actions 入门"
 date: 2019-12-30T16:26:12+08:00
 lastmod: 2019-12-30T16:26:12+08:00
 draft: true
@@ -88,16 +88,16 @@ GitHub Actions 有一些术语。
 
 ### 1. 实操
 
-**1、我们先新建一个仓库**
+#### 1、我们先新建一个仓库
 ![New Repository](/images/posts/github_action_new_repository.png)
 
-**2、将新的仓库 clone 下来**
+#### 2、将新的仓库 clone 下来
 
 ```shell script
 # git clone {YOUR REPOSITORY}
 ```
 
-**3、进入你仓库目录，新建文件夹 .github/workflows**
+#### 3、进入你仓库目录，新建文件夹 .github/workflows
 
 ```shell script
 mkdir -p .github/workflows 
@@ -108,7 +108,7 @@ GitHub Actions 的配置文件叫做 workflow 文件，存放在代码仓库的 
 `workflow` 文件采用 YAML 格式，文件名可以任意取，但是后缀名统一为 `.yml`，比如 `example.yml` 。一个库可以有多个 `workflow` 文件。
 GitHub 只要发现 `.github/workflows` 目录里面有 `.yml` 文件，就会自动运行该文件。
 
-**4、新建文件 `example.yml`，将下面的脚本复制到文件里面，然后在根目录下新建一个 `text` 文件 里面写上Hello Actions。**
+#### 4、新建文件 `example.yml`，将下面的脚本复制到文件里面，然后在根目录下新建一个 `text` 文件 里面写上Hello Actions.
 
 ```yaml
 name: First example
@@ -121,14 +121,16 @@ jobs:
     runs-on: ubuntu-18.04
     name: hello-actions
     steps:
+      # 每一个不走步骤跟随一个 name ，还有一些其他的参数。
       - name: Checkout Master
         uses: actions/checkout@v1
+
       - name: Cat text
         run: |
           cat text
 ```
 
-**5、推送到远程master**
+#### 5、推送到远程master
 
 打开我们的仓库 Actions 标签页
 
@@ -140,7 +142,7 @@ jobs:
 
 我们可以看到，我们第一个构建打印 text 文件成功。
 
-第一个实操结束了，也得到了相应的结果，来看一下每个语法分别的意思是什么？
+第一个实操结束了，也得到了相应的结果，来看一下每个语法分别的意思。
 
 ### 2. Workflow Yaml 语法
 
@@ -148,9 +150,44 @@ jobs:
     
 * **on**: 触发工作流程，也就是我们何时触发 workflow 的条件，必填项。 我们在实操写的意思是，推送到 `master` 分支触发构建。
 
-* **jobs**: 
+* **jobs**: 工作组
 
-## （三）参考资料
+* **hello-actions:**: 工作的 job，这里 `hello-actions` 可以自己随便填写，一个自己能够看得懂的名称
+
+* **runs-on:**: 运行在什么平台，我们这里指定的是 `ubuntu-18.04`
+
+* **steps:**: 步骤，workflow 会从上到下依次去执行你定义的一些步骤
+
+* **uses:**: uses 可以指定一些，在 GitHub 里面的 Actions，这个 Actions 是别人已经打包好的一些命令，比如 我们这里 `actions/checkout@v1` 意思就是 检出代码
+
+* **run:**: 执行的命令，我们这里 就普通一个 输出
+
+每一个 `step` 必须要有一个 `uses` 或 `run`, 因为你要指定这个步骤是干嘛的。
+
+更多语法可以仔细阅读 [GitHub workflow 语法](https://help.github.com/en/articles/workflow-syntax-for-github-actions)
+
+uses 使用的 Actions 可以在GitHub 上的 商店 里面看到 [https://github.com/marketplace?type=actions](https://github.com/marketplace?type=actions)
+
+下面我们可以自己尝试一下，修改 text 文件 推送到 master 分支他打印的一些东西
+
+## （三）总结
+
+这里我们讲了一些初始的 GitHub Actions 的用法，后面会从 Hugo 搭建博客来实战 GitHub Actions 的一些用法。
+
+uses 可以通过 商店来找到我们的一些已经定义好的 actions，这些 actions 可以简化我们的一些命令，当然，你可以自己在 steps 自己去写一些命令来替代他。但是不要频繁造轮子，别人写的 actions 其实已经包含了你的一些操作。
+
+**后续文章预告，后面我会从 Hugo 搭建博客来讲一下我自己的 Actions 的用法**
+
+[本教程GitHub 仓库](https://github.com/yoloyi/github-actions-getting-start)
+
+## （四）参考资料
+
+* [GitHub Actions](https://help.github.com/en/actions)
+* [自动化构建](https://help.github.com/en/actions/automating-your-workflow-with-github-actions)
+* [workflow 语法](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobs)
+
+
+
 
 
 
