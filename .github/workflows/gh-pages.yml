@@ -24,7 +24,6 @@ jobs:
         run: |
           HUGO_ENV=production hugo --gc --minify
           cp ./CNAME ./public/CNAME
-          cp ./baidu_verify_6GkDhoZ3Pq.html ./public/baidu_verify_6GkDhoZ3Pq.html
 
       - name: Deploy Hugo to gh-pages
         uses: peaceiris/actions-gh-pages@v2
