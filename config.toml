@@ -1,4 +1,4 @@
-baseURL = "//blog.yoloyi.com/"
+baseURL = "https://blog.yoloyi.com/"
 languageCode = "zh"                                      # website language
 defaultContentLanguage = "zh"                            # [en, zh, ...] determines which i18n file to use
 title = "余农场主"                                   # website title
@@ -50,12 +50,6 @@ staticDir = ["static", "data"]               # static directories
     name = "Categories"
     url = "categories"
     weight = 3
-
-  [[menu.main]]
-    identifier = "juejin"
-    name = "JueJin"
-    url = "https://juejin.im/user/5e05c80e518825127f086479"
-    weight = 4
 
   [[menu.main]]
     identifier = "about"
