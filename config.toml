@@ -52,8 +52,8 @@ staticDir = ["static", "data"]               # static directories
     weight = 3
 
   [[menu.main]]
-    identifier = "juejin"
-    name = "Juejin"
+    identifier = "JueJin"
+    name = "JueJin"
     url = "https://juejin.im/user/5e05c80e518825127f086479"
     weight = 4
 
