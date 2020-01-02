@@ -5,7 +5,7 @@ lastmod: 2020-01-02T11:04:09+08:00
 draft: false
 description: "Hugo 自动化构建 GitHub Pages"
 show_in_homepage: true
-show_description: false
+show_description: true
 license: ''
 
 tags: [CI/CD, 工具]
@@ -22,7 +22,6 @@ math: false
 
 <!--more-->
 
-# GitHub Actions 实战 - 用 Hugo 自动构建 搭建 GitHub Pages
 
 Hugo 是什么，我就不做过多的累述了。这本大体讲解，Actions 如何 自动化构建出 Hugo 的静态页面。
 
