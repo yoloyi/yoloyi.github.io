@@ -3,7 +3,6 @@
 
 <!--more-->
 
-# GitHub Actions 实战 - 用 Hugo 自动构建 搭建 GitHub Pages
 
 Hugo 是什么，我就不做过多的累述了。这本大体讲解，Actions 如何 自动化构建出 Hugo 的静态页面。
 
