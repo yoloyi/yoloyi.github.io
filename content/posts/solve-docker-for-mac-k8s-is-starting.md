@@ -8,8 +8,8 @@ show_in_homepage: true
 show_description: false
 license: ''
 
-tags: [k8s, 工具]
-categories: [k8s]
+tags: [K8S, 踩坑]
+categories: [踩坑]
 
 featured_image: ''
 featured_image_preview: ''
