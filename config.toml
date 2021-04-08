@@ -67,7 +67,7 @@ staticDir = ["static", "data"]               # static directories
 [params]
   version = "5.x"                                        # LoveIt theme version
   description = "余农场主的个人博客, Golang, 后台开发, 云服务, 微服务"                      # site description
-  keywords = ["Golang", "Php", "微服务", "后台开发"]                   # site keywords
+  keywords = ["Golang", "PHP", "微服务", "后台开发"]                   # site keywords
 
                                                       #### Home Page Info
   home_mode = "post"                                     # [post, other] home mode

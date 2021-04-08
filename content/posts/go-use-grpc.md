@@ -1,5 +1,5 @@
 ---
-title: "Go语言 简单实用 GRP"
+title: "Go语言 简单实用 GRPC"
 date: 2019-12-13T00:00:00+08:00
 draft: false
 description: "Golang 使用 GRPC 和 GRPC proto 使用"
