@@ -96,8 +96,8 @@ staticDir = ["static", "data"]               # static directories
   [params.cdn]                                       #### CSS and JS Files CDN
     fontawesome_free_css = ''                           # for example '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous">'
     animate_css = ''
-    gitalk_css = ''
-    gitalk_js = ''
+    gitalk_css = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css'
+    gitalk_js = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js'
     valine_js = ''
     jquery_js = ''
     lazysizes_js = ''
