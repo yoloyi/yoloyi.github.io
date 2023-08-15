@@ -119,7 +119,7 @@ staticDir = ["static", "data"]               # static directories
 
   [params.social]                                        # Social Info in home page
     GitHub = "yoloyi"
-    Email = "me@yoloyi.com"
+    Email = "uyy110@qq.com"
     #Linkedin = "xxxx"
     #Twitter = "xxxx"
     #Instagram = "xxxx"
